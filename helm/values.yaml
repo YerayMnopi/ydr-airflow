@@ -569,7 +569,7 @@ dags:
   git:
     ##
     ## url to clone the git repository
-    url:
+    url: https://github.com/YerayMnopi/ydr-airflow.git
     ##
     ## branch name, tag or sha1 to reset to
     ref: master
@@ -605,7 +605,7 @@ dags:
       resources: {}
   initContainer:
     ## Fetch the source code when the pods starts
-    enabled: false
+    enabled: true
     ## Image for the init container (any image with git will do)
     image:
       ## docker-airflow image

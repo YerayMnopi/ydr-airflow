@@ -1,4 +1,5 @@
-# Airflow
+# YDR Airflow
+`helm install -f ./helm/values.yaml airflow stable/airflow`
 
 ## Repos
 - [Youtube tutorial](https://github.com/tuanavu/airflow-tutorial.git)
