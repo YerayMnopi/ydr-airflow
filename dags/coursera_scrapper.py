@@ -15,7 +15,7 @@ default_args = {
 }
 
 dag = DAG(
-    'Coursera scrapper',
+    'Coursera_scrapper',
     default_args=default_args,
     schedule_interval=timedelta(days=1)
 )
