@@ -17,15 +17,17 @@ default_args = {
 dag = DAG(
     'Coursera_scrapper',
     default_args=default_args,
-    schedule_interval=timedelta(days=1)
+    schedule_interval=timedelta(minutes=1)
 )
 
 
 coursera = KubernetesPodOperator(namespace='default',
-                          image="belce/ydr-data-crawler",
-                          name="passing-test",
+                          image="belce/ydr-data-crawler:latest",
+                          name="ydr-data-crawler-coursera",
                           task_id="coursera-scrapper-task",
                           get_logs=True,
-                          dag=dag
+                          dag=dag,
+                          in_cluster=True,
+                          is_delete_operator_pod=True,
                           )
 
